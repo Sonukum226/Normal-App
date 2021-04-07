@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ice Cream Shop"
+            android:layout_gravity="center"
+            android:textSize="28sp"
+            />
+
+         <ImageView
+             android:id="@+id/ice_cream_icon"
+             android:layout_width="92dp"
+             android:layout_height="92dp"
+             android:src="@drawable/ic_launcher_background"
+             android:layout_gravity="center"
+             />
+
+         /<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="Today's Flavour: Moose Tracks"
+            android:textSize="26dp"
+            android:layout_gravity="center"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:padding="12dp"
+            android:background="@color/purple_200"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                >
+                <TextView
+                android:id="@+id/ice_cream_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="30sp"
+
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="left"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginLeft="50dp"
+               android:layout_marginTop="5dp"
+               >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Vanila ice cream with peanut butter chololate chunks"
+             android:textSize="15sp"
+             />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: $4.67"
+                android:layout_marginTop="10dp"
+                />
+           </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="I want to order:"
+          android:textSize="18dp"
+          />
+
+            <EditText
+                android:id="@+id/numberof_icecream"
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="scoops of ice cream"
+                android:textSize="18dp"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        >
+
+    <Button
+        android:id="@+id/place_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:text="PLACE ORDER"
+        />
+    <Button
+        android:id="@+id/restock_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="RESTOCK"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Total:$9.34"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        />
+
+
+    </LinearLayout>
