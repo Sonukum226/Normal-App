@@ -14,9 +14,23 @@ import com.example.a2starter.Modal.iceCream;
 
 @Database(entities = {iceCream.class},version =1,exportSchema = false)
 public abstract class iceCreamDatabase extends RoomDatabase {
-//    public static final String DATABASE_NAME="iceCream";
+    private static iceCreamDatabase database;
+    public static final String DATABASE_NAME="iceCream";
+
+
+    public synchronized static iceCreamDatabase getInstance(Context context){
+        //Check condition
+
+        if (database==null){
+            //when databse is null , initialize it
+            database=Room.databaseBuilder(context.getApplicationContext(),iceCreamDatabase.class,DATABASE_NAME)
+                    .allowMainThreadQueries().fallbackToDestructiveMigration().build();
+        }
+        return database;
+    }
 
     public abstract iceCreamDao iceCreamDao();//to call Dao class
+
 
 
 }

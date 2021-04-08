@@ -7,12 +7,13 @@ import android.os.AsyncTask;
 
 import androidx.room.Room;
 
+import com.example.a2starter.Dao.iceCreamDao;
 import com.example.a2starter.Database.iceCreamDatabase;
 import com.example.a2starter.Modal.iceCream;
 
 public class iceCreamRepository {
     private String DB_NAME="ICE_CREAM";
-
+    private iceCreamDao iceCreamDao;
     private iceCreamDatabase Ice_database;
 
     public iceCreamRepository(Context context)
@@ -29,9 +30,12 @@ public class iceCreamRepository {
         data.setPrice(price);
         data.setQuantity(quantity);
 
+        iceCreamDao.insert(data);
     }
 
+    public int update(int id,int quantity){
+      return  iceCreamDao.update(id,quantity);
 
-
+    }
 
 }

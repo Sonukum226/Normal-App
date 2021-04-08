@@ -4,6 +4,7 @@ import android.provider.UserDictionary;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -20,13 +21,13 @@ public interface iceCreamDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(iceCream iceCream);
 
-    @Update
-    void update(iceCream iceCream);
+    @Query("UPDATE iceCream SET quantity =:quantity WHERE id = :id")
+    int update(int id,int quantity);
 
-    @Query("SELECT * FROM iceCream")
-    LiveData<List<iceCream>> getAlliceCream();
+//    @Query("SELECT * FROM iceCream")
+//    LiveData<List<iceCream>> getAlliceCream();
 
-    @Query("DELETE from iceCream")
-    void deleteAll(iceCream iceCream);
+    @Delete
+    void deleteAll(List<iceCream> iceCream);
 
 }
